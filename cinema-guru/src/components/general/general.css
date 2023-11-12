@@ -2,7 +2,7 @@
 
 /* -- BUTTONS -- */
 button {
-    /* background-color: var(--color-dark-red); */
+    background-color: var(--color-dark-red);
     color: var(--color-light);
     font-size: 15px;
     border: none;
@@ -20,7 +20,6 @@ button {
     margin:10px;
     display: flex;
     flex-direction:column;
-    max-width: 40%;
 }
 
 input {

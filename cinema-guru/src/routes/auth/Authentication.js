@@ -1,5 +1,7 @@
 import './auth.css';
 import Button from '../../components/general/Button';
+import Login from './Login';
+
 import React, { useState } from 'react';
 
 const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
@@ -23,6 +25,12 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
                     onClick={() => set_switch(false)}
                 />
             </div>
+            <Login
+                username={username}
+                password={password}
+                setUsername={setUsername}
+                setPassword={setPassword}
+            />
         </form>
     )
 }

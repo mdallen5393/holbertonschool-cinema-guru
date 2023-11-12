@@ -2,36 +2,39 @@ import './auth.css';
 import Input from '../../components/general/Input';
 import Button from '../../components/general/Button';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from FontAwesomeIcon;
+import { faUser, faLock, faPlus} from '@fortawesome/free-solid-svg-icons';
 
 const Login = ({username, password, setUsername, setPassword}) => {
+    const handleLogin = () => {
+        // handle login
+        console.log("logged in!")
+    }
+
     return (
         <div className="login">
+            <p>Create a new account</p>
             <Input
                 label="Username:"
                 type="text"
-                className=""
-                value=""
-                setValue=""
-                icon=""
-                inputAttributes=""
+                className="username"
+                value={username}
+                setValue={setUsername}
+                icon={faUser}
             />
             <Input
-                label="Username:"
+                label="Password:"
                 type="text"
-                className=""
-                value=""
-                setValue=""
-                icon=""
-                inputAttributes=""
+                className="password"
+                value={password}
+                setValue={setPassword}
+                icon={faLock}
             />
             <Button
-                label="Sign Up"
+                label="Sign In"
                 type="submit"
-                className=""
-                onClick=""
-                icon=""
+                className="login-button"
+                onClick={handleLogin}
+                icon={faPlus}
             />
         </div>
     );
