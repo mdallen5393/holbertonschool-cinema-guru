@@ -1,18 +1,17 @@
 import './general.css';
 
 const SelectInput = ({label, options, className, value, setValue}) => {
-    handleInput = (event) => {
+    const handleSelect = (event) => {
         setValue(event.target.value);
     }
 
     return (
-        <div classname={`select-input-container ${className}`}>
-            {icon && <FontAwesomeIcon icon={icon} />}
+        <div className={`select-input-container ${className}`}>
             <label>
                 {label}
             </label>
             <select value={value} onChange={handleSelect}>
-                {options.Map((option, index) => (
+                {options.map((option, index) => (
                     <option key={index} value={option}>{option}</option>
                 ))}
             </select>

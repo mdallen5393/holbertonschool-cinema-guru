@@ -9,11 +9,13 @@ const Input = ({ label, type, className, value, setValue, icon, inputAttributes 
     }
 
     return (
-        <div classname={`input-container ${className}`}>
-            {icon && <FontAwesomeIcon icon={icon} />}
-            <label>
-                {label}
-            </label>
+        <div className={`input-container ${className}`}>
+            <div className='icon-label'>
+                {icon && <FontAwesomeIcon icon={icon} />}
+                <label>
+                    {label}
+                </label>
+            </div>
             <input
               type={type}
               value={value}
