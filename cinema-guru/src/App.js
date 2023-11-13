@@ -1,5 +1,5 @@
 import './App.css';
-// import Dashboard from './components/Dashboard';
+import Dashboard from './routes/dashboard/Dashboard';
 import Authentication from './routes/auth/Authentication';
 
 import React, { useState, useEffect } from 'react';
@@ -30,8 +30,13 @@ function App() {
 
   return (
     <div className="App">
-      {/* {isLoggedIn ? <Dashboard /> : <Authentication />} */}
-      <Authentication />
+      {isLoggedIn ? <Dashboard
+        userUsername={userUsername}
+        setIsLoggedIn={setIsLoggedIn}
+      /> : <Authentication
+        setIsLoggedIn={setIsLoggedIn}
+        setUserName={setUserUsername}
+      />}
     </div>
   );
 }

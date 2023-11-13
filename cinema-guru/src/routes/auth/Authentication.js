@@ -20,7 +20,7 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
                 password: password
             })
             .then(response => {
-                localStorage.setItem('jwtToken', response.data.token);
+                localStorage.setItem('accessToken', response.data.token);
                 setUserUsername(username);
                 setIsLoggedIn(true);
             })
@@ -33,7 +33,7 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
                 password: password
             })
             .then(response => {
-                localStorage.setItem('jwtToken', response.data.token);
+                localStorage.setItem('accessToken', response.data.token);
                 setUserUsername(username);
                 setIsLoggedIn(true);
             })
