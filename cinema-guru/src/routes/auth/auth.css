@@ -17,12 +17,12 @@ form {
     max-width: 450px;
 }
 
-form > .login {
+form > .login, form > .register {
     display: flex;
     flex-direction: column;
 }
 
-form > .login > p {
+form > .login > p, form > .register > p {
     font-size: 19px;
     align-self: center;
     color: #1c1c1c;
@@ -43,33 +43,33 @@ form Button {
 }
 
 /* LOGIN */
-.login {
+.login, .register {
     background-color: white;
 }
 
-.login .icon-label {
+.login .icon-label, .register .icon-label {
     margin: 5px;
 }
 
-.login .icon-label svg {
+.login .icon-label svg, .register .icon-label svg {
     color: gray;
 }
 
-.login label {
+.login label, .register label {
     color: #1C1C1C;
 }
 
-.login Input {
+.login Input, .register Input {
     background-color: white;
     margin: 5px;
 }
 
-.login-button {
+.login-button, .register-button {
     align-self: flex-end;
     margin: 10px;
 }
 
-.login .input-container {
+.login .input-container, .register .input-container {
     padding-left: 10%;
     padding-right: 10%;
 }

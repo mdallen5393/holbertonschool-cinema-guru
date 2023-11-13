@@ -4,15 +4,15 @@ import Button from '../../components/general/Button';
 
 import { faUser, faLock, faPlus} from '@fortawesome/free-solid-svg-icons';
 
-const Login = ({username, password, setUsername, setPassword}) => {
+const Register = ({username, password, setUsername, setPassword}) => {
     const handleLogin = () => {
         // handle login
         console.log("logged in!")
     }
 
     return (
-        <div className="login">
-            <p>Sign in with your account</p>
+        <div className="register">
+            <p>Create a new account</p>
             <Input
                 label="Username:"
                 type="text"
@@ -30,9 +30,9 @@ const Login = ({username, password, setUsername, setPassword}) => {
                 icon={faLock}
             />
             <Button
-                label="Sign In"
+                label="Sign Up"
                 type="submit"
-                className="login-button"
+                className="register-button"
                 onClick={handleLogin}
                 icon={faPlus}
             />
@@ -40,4 +40,4 @@ const Login = ({username, password, setUsername, setPassword}) => {
     );
 };
 
-export default Login;
+export default Register;
