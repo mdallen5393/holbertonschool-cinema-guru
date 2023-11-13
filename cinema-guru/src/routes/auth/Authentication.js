@@ -4,18 +4,47 @@ import Login from './Login';
 import Register from './Register';
 
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
     const [_switch, set_switch] = useState(true);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = () => {
-        
+    const handleSubmit = (onSubmit) => {
+        onSubmit.preventDefault();
+
+        if (_switch) {
+            axios.post('/api/auth/login', {
+                username: username,
+                password: password
+            })
+            .then(response => {
+                localStorage.setItem('jwtToken', response.data.token);
+                setUserUsername(username);
+                setIsLoggedIn(true);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+        } else {
+            axios.post('/api/auth/register', {
+                username: username,
+                password: password
+            })
+            .then(response => {
+                localStorage.setItem('jwtToken', response.data.token);
+                setUserUsername(username);
+                setIsLoggedIn(true);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+        }
     }
 
     return (
-        <form className="auth">
+        <form className="auth" onSubmit={handleSubmit}>
             <div className="auth-buttons">
                 <Button
                     label="Sign In"
