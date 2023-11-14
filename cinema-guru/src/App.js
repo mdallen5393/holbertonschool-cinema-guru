@@ -10,6 +10,7 @@ function App() {
   const [userUsername, setUserUsername] = useState('');
 
   const [accessToken, setAccessToken] = useState('');
+  console.log(accessToken);
 
   useEffect(() => {
     const storedToken = localStorage.getItem('accessToken');

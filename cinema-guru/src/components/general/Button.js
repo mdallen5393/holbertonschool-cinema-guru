@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './general.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
