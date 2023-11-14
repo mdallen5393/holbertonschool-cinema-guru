@@ -1,5 +1,5 @@
 import './components.css';
-
+ 
 const Activity = ({userUsername, title, date}) => { // TODO: is this correct?
     return (
         <li>
