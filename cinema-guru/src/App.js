@@ -16,7 +16,7 @@ function App() {
     const storedToken = localStorage.getItem('accessToken');
     if (storedToken) {
       setAccessToken(storedToken);
-      axios.post('/api/auth/', {}, {
+      axios.post('http://localhost:8000/api/auth/', {}, {
         headers: {
           Authorization: `Bearer ${storedToken}`
         }

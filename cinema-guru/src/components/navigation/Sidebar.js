@@ -29,7 +29,7 @@ const SideBar = () => {
     }
 
     useEffect(() => {
-        axios.get('/api/activity')
+        axios.get('http://localhost:8000/api/activity')
         .then(response => {
             setActivities(response.data);
         })

@@ -1,8 +1,12 @@
 import './dashboard.css';
 import Header from '../../components/navigation/Header';
 import SideBar from '../../components/navigation/Sidebar';
+import Favorites from './Favorites';
+import HomePage from './HomePage';
+import WatchLater from './WatchLater';
 
-import { BrowserRouter, Routes, Route, Navigate } from react-router-dom;
+
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 const Dashboard = ({userUsername, setIsLoggedIn}) => {
     return (
@@ -17,7 +21,7 @@ const Dashboard = ({userUsername, setIsLoggedIn}) => {
                 <Route path='/home' element={<HomePage />} />
                 <Route path='/favorites' element={<Favorites />} />
                 <Route path='/watchlater' element={<WatchLater />} />
-                <Route path='*' element={<Nagivate to='/home' />} />
+                <Route path='*' element={<Navigate to='/home' />} />
             </Routes>
         </div>
         </BrowserRouter>

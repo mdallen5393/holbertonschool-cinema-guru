@@ -15,7 +15,7 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
         onSubmit.preventDefault();
 
         if (_switch) {
-            axios.post('/api/auth/login', {
+            axios.post('http://localhost:8000/api/auth/login', {
                 username: username,
                 password: password
             })
@@ -28,7 +28,7 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
                 console.error(error);
             });
         } else {
-            axios.post('/api/auth/register', {
+            axios.post('http://localhost:8000/api/auth/register', {
                 username: username,
                 password: password
             })
